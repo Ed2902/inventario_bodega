@@ -2,9 +2,12 @@ document.getElementById('Producto').addEventListener('submit', function(event) {
     event.preventDefault();
 
     var isValid = true;
-    var inputs = document.querySelectorAll('#Producto input[required]');
+    var inputs = document.querySelectorAll('#Producto input[required], #Producto textarea[required]');
     var idProductoInput = document.getElementById('id_producto');
     var usuarioInput = document.getElementById('Usuario');
+    var altoInput = document.getElementById('alto');
+    var anchoInput = document.getElementById('ancho');
+    var profundoInput = document.getElementById('profundo');
 
     // Validar que todos los campos requeridos estén llenos
     inputs.forEach(function(input) {
@@ -30,6 +33,28 @@ document.getElementById('Producto').addEventListener('submit', function(event) {
         usuarioInput.classList.add('is-invalid');
     } else {
         usuarioInput.classList.remove('is-invalid');
+    }
+
+    // Validar que Alto, Ancho y Profundo sean números enteros o decimales
+    if (!/^\d+(\.\d+)?$/.test(altoInput.value.trim())) {
+        isValid = false;
+        altoInput.classList.add('is-invalid');
+    } else {
+        altoInput.classList.remove('is-invalid');
+    }
+
+    if (!/^\d+(\.\d+)?$/.test(anchoInput.value.trim())) {
+        isValid = false;
+        anchoInput.classList.add('is-invalid');
+    } else {
+        anchoInput.classList.remove('is-invalid');
+    }
+
+    if (!/^\d+(\.\d+)?$/.test(profundoInput.value.trim())) {
+        isValid = false;
+        profundoInput.classList.add('is-invalid');
+    } else {
+        profundoInput.classList.remove('is-invalid');
     }
 
     if (isValid) {

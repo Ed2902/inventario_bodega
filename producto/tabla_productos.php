@@ -83,7 +83,13 @@
                         <th>ID Producto</th>
                         <th>Nombre</th>
                         <th>Referencia</th>
+                        <th>Marca</th>
+                        <th>Descripción</th>
+                        <th>Alto (cm)</th>
+                        <th>Ancho (cm)</th>
+                        <th>Profundo (cm)</th>
                         <th>Tipo</th>
+                        <th>Cliente</th>
                         <th>Fecha</th>
                         <th>ID Usuario</th>
                     </tr>
@@ -102,7 +108,13 @@
                             echo "<td>{$dato['id_producto']}</td>";
                             echo "<td>{$dato['nombre']}</td>";
                             echo "<td>{$dato['referencia']}</td>";
+                            echo "<td>{$dato['marca']}</td>";
+                            echo "<td>{$dato['descripcion']}</td>";
+                            echo "<td>{$dato['alto']}</td>";
+                            echo "<td>{$dato['ancho']}</td>";
+                            echo "<td>{$dato['profundo']}</td>";
                             echo "<td>{$dato['tipo']}</td>";
+                            echo "<td>{$dato['cliente']}</td>";
                             echo "<td>{$dato['fecha']}</td>";
                             echo "<td>{$dato['id_usuarioFK']}</td>";
                             echo "</tr>";
